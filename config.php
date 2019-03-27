@@ -12,13 +12,13 @@ class config
      * 返回db相关配置
      * @return array
      */
-    public function db()
+    public function dbpdo()
     {
         $dbConfig = [
-            'host' => '127.0.0.1',
-            'db_name' => 'my_test',
-            'db_user' => 'root',
-            'db_password' => 'root',
+            'host' => '39.96.53.113',
+            'db_name' => 'test',
+            'db_user' => 'liawen',
+            'db_password' => 'xiaohaizi1!',
         ];
 
         return [
@@ -26,5 +26,19 @@ class config
             'user' => $dbConfig['db_user'],
             'password' => $dbConfig['db_password'],
         ];
+    }
+    /**
+     * db 相关配置
+     * @return array
+     */
+    public function dbmysql()
+    {
+        return array(
+            'host' => '39.96.53.113',
+            'dbname' => 'test',
+            'dbuser' => 'liawen',
+            'dbpwd' => 'xiaohaizi1!',
+            'port' => '3306',
+        );
     }
 }

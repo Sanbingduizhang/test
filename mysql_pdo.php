@@ -7,7 +7,7 @@ class mysql_pdo {
         try {
 
             $config = new config();
-            $db = $config->db();
+            $db = $config->dbpdo();
             $pdo = new PDO($db['dsn'], $db['user'], $db['password']);
             $this->pdo = $pdo;
 
@@ -25,7 +25,7 @@ class mysql_pdo {
     }
     public function fetchAll()
     {
-        $pdo_pre = $this->pdo->prepare('select * from users');
+        $pdo_pre = $this->pdo->prepare('select * from test');
         $pdo_pre->execute();
         return $pdo_pre->fetchAll(PDO::FETCH_ASSOC);
     }
