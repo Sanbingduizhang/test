@@ -12,4 +12,4 @@ define('PUBLIC_DIR',__DIR__ . '/');                 //public文件目录
 define('TIMEZONE','Asia/Shanghai');
 ini_set('data.timezone',TIMEZONE);
 
-var_dump(PUBLIC_DIR);exit();
+require FRAMEWORK_DIR;
